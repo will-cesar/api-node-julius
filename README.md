@@ -5,7 +5,7 @@
 
 ## Projeto
 
-> Julius API
+> Julius API - API para controle de gastos pessoais
 
 ## Ferramentas e Tecnologias utilizadas
 
@@ -24,4 +24,11 @@
 ```
 - Uso do typeORM com o Postgres
 - Postgres rodando dentro do docker
+- Relacionamento entre tabelas
+```
+
+### Run dev ###
+
+```
+- npm run dev
 ```
