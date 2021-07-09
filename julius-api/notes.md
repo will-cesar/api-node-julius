@@ -30,7 +30,7 @@ Docker Compose
     - version ==> versão do Docker
     - services ==> 
         - dentro dos services é colocado cada container que vai ser utilizado para a aplicação
-        - nessa aplicação foi utilizado apenas o service de "db", que será do banco de dados
+        - nessa aplicação foi utilizado o service de "db", que será do banco de dados, e o "app", que será a aplicação em si
     - image ==> seleciona a tecnologia que vai ser utilizada no container
     - environment ==>
         - configuração do banco de dados
@@ -43,8 +43,23 @@ Docker Compose
         - exemplo: '5432:5432'
             - primeiro config é a porta do banco
             - segunda config é a porta que será exposta para outro container  
-- comando: docker-compose up -d ==> faz as configurações do container dentro do docker
+    - container_name ==> nome do container
+    - restart ==> responsável por reiniciar a app quando cair ou algo do tipo
+    - build ==> forma de como será o build da aplicação
+        - nessa app foi configurado como "." apenas, assim o docker vai pegar o Dockerfile da pasta raiz
+        - o Dockerfile é onde estão as configurações para o build da app
+    - depends_on ==> define que o serviço depende de outro para conseguir ser executado
+- comandos: 
+    - docker-compose up -d ==> faz as configurações do container dentro do docker e roda
+    - docker-compose up --force-recreate --build -d ==> recria o container
+
 
 Postgres
 - banco de dados relacional
 - é possível conectar e visualizar ele pelo Beekeeper Studio
+
+Dockerfile
+- utilizado para criar imagens. Em outras palavras, ele serve como a receita para construir um container, permitindo definir um ambiente personalizado e próprio para o projeto
+
+Dockerignore
+- arquivo igual o gitignore, para não incluir pastas selecionadas

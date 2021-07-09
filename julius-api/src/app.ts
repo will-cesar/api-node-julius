@@ -4,8 +4,8 @@ import * as logger from 'morgan';
 import { Request, Response } from 'express';
 
 import { conectarServidorNoBD } from './config/db';
-import { routerUsuario } from './routes/usuario';
-import { routerLancamento } from './routes/lancamento';
+import { routerUsuario } from './route/usuario';
+import { routerLancamento } from './route/lancamento';
 
 // Cria a aplicação
 export const app = express();

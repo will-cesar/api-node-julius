@@ -25,6 +25,8 @@
 - Uso do typeORM com o Postgres
 - Postgres rodando dentro do docker
 - Relacionamento entre tabelas
+- App e banco de dados rodando dentro do docker
+- Configuração de Dockerfile, docker compose e dockerignore
 ```
 
 ### Run dev ###
